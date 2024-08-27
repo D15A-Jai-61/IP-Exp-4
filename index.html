@@ -14,32 +14,41 @@
     </head><br><br><hr>
 
     <body>
-         <h1>LeetPack T-Shirts</h1>
-        
+        <h1>LeetPack T-Shirts</h1>
         <form name="CustDet" onsubmit="return validateForm()" method="post">
 
         <h2>Customer details</h2><br><br>
 
-        <label for="name">Name :</label>
-        <input type="text" id="CustName" name="CustName"><br><br>
+            <div>
+            <label for="CustName">Name :</label>
+            <input type="text" id="CustName" name="CustName">
+            </div>
 
-        <label for="address">Address :</label>
-        <input type="text" id="address" name="address" required><br><br>
-        
-        <label for="email">Email :</label>
-        <input type="text" id="email" name="email" required><br><br>
+            <div>
+            <label for="address">Address :</label>
+            <input type="text" id="address" name="address" required>
+            </div>
 
-        <label for="pnumber">Phone number :</label>
-        <input type="text" id="pnumber" name="pnumber" pattern="[0-9]{10}" title="10 digit number" required><br><br>
+            <div>
+            <label for="email">Email :</label>
+            <input type="text" id="email" name="email" required>
+            </div>
+
+            <div>
+            <label for="pnumber">Phone number :</label>
+            <input type="text" id="pnumber" name="pnumber" pattern="[0-9]{10}" title="10 digit number" required>
+            </div>
 
         <hr>
 
         <h2>T-Shirt</h2><br><br>
         
-        
+            <div>
             <label for="tagline">Tagline :</label>
-            <input type="text" id="tagline" name="tagline" pattern="[A-Za-z]{15}" title="15 letter tagline" required><br><br>
-
+            <input type="text" id="tagline" name="tagline" pattern="[A-Za-z]{15}" title="15 letter tagline" required>
+            </div>
+            
+            <div>
             <label for="color">Choose a color :</label>
             <select id="color" name="color">
                 <option value="White">White</option>
@@ -62,8 +71,10 @@
                 <option value="Magenta">Magenta</option>
                 <option value="Silver">Silver</option>
                 <option value="Gold">Gold</option>
-            </select><br><br>
-
+            </select>
+            </div>
+            
+            <div>
             <label for="size">Select size :</label>
             <select id="size" name="size">
                 <option value="XS">Extra Small</option>
@@ -71,25 +82,35 @@
                 <option value="M">Medium</option>
                 <option value="L">Large</option>
                 <option value="XL">Extra large</option>
-            </select><br><br>
+            </select>
+            </div>
+            
+            <div>
+            <label for="quantity"> Quantity (Between 1 and 200) :</label>
+            <input type="number" id="quantity" name="quantity" min="1" max="200" required>
+            </div>
 
-        <label for="quantity"> Quantity (Between 1 and 200) :</label>
-        <input type="number" id="quantity" name="quantity" min="1" max="200" required><br><br>
-
-        <paragraph>25% off on all orders of quantity 50 or higher!</paragraph><br><br>
+        <div>
+        <paragraph>25% off on all orders of quantity 50 or higher!</paragraph>
+        </div>
 
         <hr>
             
-
+        <div>
         <h2 id="demo">Order details</h2>
         <button type="button" onclick='document.getElementById("demo").innerHTML = "Details of the Order"'>Change heading</button>
-        <br><br>
-            
+        </div>
+        
+        <div>
         <label for="date">Date of Delivery (At least 3 days from date of order/today's date) :</label>
-        <input type="date" id="date" name="date" required><br><br>
-
-        <paragraph>Cost/T-Shirt (Before discount if applicable) : 400 INR</paragraph><br><br>
-
+        <input type="date" id="date" name="date" required>
+        </div>
+        
+        <div>
+        <paragraph>Cost/T-Shirt (Before discount if applicable) : 400 INR</paragraph>
+        </div>
+        
+        <div>
         <paragraph>Mode of payment :</paragraph>
         <input type="radio" id="cash" name="payment" value="cash">
         <label for="cash">Cash</label>
@@ -98,10 +119,13 @@
         <input type="radio" id="neft" name="payment" value="neft">
         <label for="neft">Net banking (NEFT)</label>
         <input type="radio" id="upi" name="payment" value="upi">
-        <label for="upi">UPI</label><br><br>
-
+        <label for="upi">UPI</label>
+        </div>
+        
+        <div>
         <input type="submit">
         <input type="reset">
+        </div>
 
         </form>
     </body>
